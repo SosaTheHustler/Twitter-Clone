@@ -2,15 +2,10 @@
 Common
 ********************/
 html, body{
-    background-color: black;
     height: 100%;
-}
-.content{
-    color: white;
-    font-family: sans-serif;
-    max-width: 600px;
-    height: 100%;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
 }
 
 /*
@@ -29,22 +24,28 @@ Post
     position: absolute;
     top: 40px;
     right: 15px;
-    border: 1px solid white;
+    border: 1px solid lightgrey;
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 3px;
+    cursor: pointer;
+    box-shadow: z;
 
 }
 
 .posts li .menu a{
-    color: red;
     text-decoration: none;
+    color: black;
+}
+
+.posts li .menu:hover{
+    text-decoration: none;
+    background-color: lightgrey;
+    transition-duration: 0.4s;
 }
 .posts li{
     display: flex;  
     padding: 20px;
-    background-color: black;
-    border: 1px solid #fff;
     position: relative;
 }
 
@@ -60,7 +61,7 @@ Post
 }
 
 .container{
-    background-color: white;
+    border-top: 1px solid #ccc;
 }
 
 .posts li .name_body .name {
@@ -89,19 +90,47 @@ ul{
     width: 70%;
     margin-bottom: 10px;
     padding: 10px;
+    border: none;
+    font-family: Helvetica;
 }
 
 .post_form textarea{
     width: 70%;
     padding: 10px;
-}
-
-.red:hover{
-    background-color: red;
-    color: white;
     border: none;
+    font-family: Helvetica;
 }
 
 .submit{
-    border: none;
+    background-color: rgb(29, 161, 242);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    box-sizing: content-box;
+    cursor: pointer;
+    font-family: Helvetica;
+}
+
+.main{
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+h1{
+    padding: 20px 20px;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+form{
+    border: 1px solid black;
+    position: relative;
+}
+
+.bottom{
+    display: flex;
 }
