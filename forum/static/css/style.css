@@ -1,0 +1,107 @@
+/*
+Common
+********************/
+html, body{
+    background-color: black;
+    height: 100%;
+}
+.content{
+    color: white;
+    font-family: sans-serif;
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/*
+Post
+********************/
+.container .menu_icon{
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.posts li .menu{
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 3px;
+
+}
+
+.posts li .menu a{
+    color: red;
+    text-decoration: none;
+}
+.posts li{
+    display: flex;  
+    padding: 20px;
+    background-color: black;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.posts li .logo{
+    flex-basis: 15%;
+}
+
+.posts li .logo img{
+    width: 60%;
+}
+.posts li .name_body {
+    flex-basis: 85%;
+}
+
+.container{
+    background-color: white;
+}
+
+.posts li .name_body .name {
+    font-weight: bold;
+}
+
+.posts li .name_body .datetime {
+    color: gray;
+}
+
+ul{
+    padding: 0;
+}
+
+@media screen and (max-width: 500px){
+    .posts li .name_body .name{
+        font-size: 20px;
+    }
+}
+
+.post_form{
+    padding: 20px 40px;
+}
+
+.post_form input{
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.post_form textarea{
+    width: 70%;
+    padding: 10px;
+}
+
+.red:hover{
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.submit{
+    border: none;
+}
