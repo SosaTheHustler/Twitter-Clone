@@ -5,14 +5,29 @@
     <div class='main'>
         <h1>Home</h1>
     <section class="post_form">
+        
         <form action="/" method="POST">
             {% csrf_token %}
-            <input type="text" name="name" placeholder="Name" required> 
+        <div class="icon">
+            <img class="my_icon" src="{% static 'img/user.png' %}">
+        </div>
+         <div class="my_form">  
+            <input class="name" type="text" name="name" placeholder="Your Name" maxlength="20" required style="
+            padding: 5px;
+            width: 95%;
+        "> 
             <textarea name="body" placeholder="What's happening?" required></textarea>
             <div class="bottom">
-                <input class="red submit" type="submit" value="Tweet">
+                <button class="red submit" type="submit">Tweet</button>
+                <input type="file" id="file" accept="{image/*}"> 
+                <label for="file">Upload
+                    <i class="material-icons">
+                        add_photo_alternate
+                    </i>
+                </label>
+
             </div>
-            
+         </div>    
          </form>
     </section>
     <section class="posts">
@@ -21,9 +36,8 @@
             
             <li class="container">
                 <img class="menu_icon js-menu-icon"  src="{% static 'img/menu.png' %}">
-                <div class="menu">
-                    <a href="/delete/{{ post.id }}/">Delete</a>
-                </div>
+                <a href="/delete/{{ post.id }}/" class="menu">Delete</a>
+                </a>
                 <div class="logo">
                     <img src="{% static 'img/user.png' %}">
                 </div>
