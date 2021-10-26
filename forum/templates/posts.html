@@ -3,10 +3,13 @@
 {% load static %}
 <section class="content">
     <div class='main'>
-        <h1>Home</h1>
+        <nav class="home">
+           <h1>Home</h1> 
+        </nav>
+        
     <section class="post_form">
         
-        <form action="/" method="POST">
+        <form action="/" method="POST" enctype='multipart/form-data'>
             {% csrf_token %}
         <div class="icon">
             <img class="my_icon" src="{% static 'img/user.png' %}">
@@ -19,15 +22,16 @@
             <textarea name="body" placeholder="What's happening?" required></textarea>
             <div class="bottom">
                 <button class="red submit" type="submit">Tweet</button>
-                <input type="file" id="file" accept="{image/*}"> 
-                <label for="file">Upload
+                <div class="img-up"> <input type="file" name="image" id="file" accept="{image/*}"> </div>
+               
+          <label for="file">Upload
                     <i class="material-icons">
                         add_photo_alternate
                     </i>
                 </label>
 
             </div>
-         </div>    
+         </div>   
          </form>
     </section>
     <section class="posts">
@@ -35,9 +39,11 @@
             {% for post in posts %}
             
             <li class="container">
-                <img class="menu_icon js-menu-icon"  src="{% static 'img/menu.png' %}">
+                <div>
+                   <img class="menu_icon js-menu-icon circle"  src="{% static 'img/menu.png' %}">
                 <a href="/delete/{{ post.id }}/" class="menu">Delete</a>
-                </a>
+                </a> 
+                 </div>
                 <div class="logo">
                     <img src="{% static 'img/user.png' %}">
                 </div>
@@ -45,6 +51,7 @@
                     <div class="name">{{ post.name }}<br></div>
                     <p>{{ post.body }}<br></p>
                     <div class="datetime">{{ post.created_at }}<br></div>
+                    <img class="image" src="{{ post.image.url }}">
                 </div>
                 
             </li>  

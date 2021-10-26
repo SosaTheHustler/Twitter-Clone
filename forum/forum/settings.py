@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +125,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+cloudinary.config ( 
+  cloud_name = "drrkccbb4", 
+  api_key = "761268165993486", 
+  api_secret = "mbEGCXbeDQtCkAAkrqHPikv8OKg",
+  secure = True
+)
+
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
@@ -128,3 +140,4 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
