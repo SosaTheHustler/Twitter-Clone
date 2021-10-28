@@ -15,6 +15,7 @@ from pathlib import Path
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +30,7 @@ SECRET_KEY = 'django-insecure-tve!vr=-4wwz0(_8#9@^nvdt+qrr+kw_kf6(yjyx5b%hska*qt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleWare'
 ]
 
 ROOT_URLCONF = 'forum.urls'
@@ -80,11 +82,21 @@ WSGI_APPLICATION = 'forum.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+'DEFAULT': {
+'ENGINE': 'django.db.backends.sqlite3',
+'NAME': BASE_DIR / 'db.sqlite3',
+}}
+
+#DATABASES = {
+   # 'default': {
+    #    'ENGINE': 'django.db.backends.postgresql',
+     #   'NAME': 'd6r5h3m9vm49gv',
+      #  'HOST': 'ec2-3-226-211-228.compute-1.amazonaws.com',
+       # 'PORT': 5432,
+        #'USER': 'vauhzqbwcyivzf',
+        #'PASSWORD': '3625f00dc9662ba1c43d1844ec9144343720036a97a15b66d74290865f3d39a2',
+         #   }
+#}
 
 
 # Password validation
@@ -140,4 +152,4 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
