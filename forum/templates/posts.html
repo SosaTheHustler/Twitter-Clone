@@ -41,11 +41,15 @@
             <li class="container">
                 <div>
                    <img class="menu_icon js-menu-icon circle"  src="{% static 'img/menu.png' %}">
+<<<<<<< HEAD
                    <div class="menu">
                      <a href="/delete/{{ post.id }}/">Delete</a><br><br>
                      <a href="/edit/{{ post.id }}/">Edit</a>  
                    </div>
                 
+=======
+                <a href="/delete/{{ post.id }}/" class="menu">Delete</a>
+>>>>>>> bba7967e0142db0b2effb0b7ccb28e53f831396b
                 </a> 
                  </div>
                 <div class="logo">
@@ -56,6 +60,7 @@
                     <p>{{ post.body }}<br></p>
                     <div class="datetime">{{ post.created_at }}<br></div>
                     <img class="image" src="{{ post.image.url }}">
+<<<<<<< HEAD
                     <form id="likes"action="{% url 'like_post' post.pk %}" method='POST'>
                         {% csrf_token %}
                         <div class="like_container">
@@ -66,6 +71,8 @@
                         </div>
                        
                     </form>
+=======
+>>>>>>> bba7967e0142db0b2effb0b7ccb28e53f831396b
                 </div>
                 
             </li>  
@@ -80,6 +87,10 @@
   crossorigin="anonymous"></script>
     <script src="{% static 'js/posts.js' %}"></script>
 </section>
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> bba7967e0142db0b2effb0b7ccb28e53f831396b
 
 {% endblock %}

@@ -22,8 +22,12 @@ class Post(models.Model):
         'Created DateTime', blank=True, auto_now_add=True
     )
 
+<<<<<<< HEAD
     likes = models.PositiveIntegerField(
         'like', default=0, db_index=True, blank=True
     )
+=======
+    
+>>>>>>> bba7967e0142db0b2effb0b7ccb28e53f831396b
     
 

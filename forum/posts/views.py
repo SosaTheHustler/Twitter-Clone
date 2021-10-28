@@ -33,6 +33,7 @@ def delete(request, post_id):
     post = Post.objects.get(id=post_id)
     post.delete()
     return HttpResponseRedirect('/')
+<<<<<<< HEAD
 
 def edit(request, post_id):
     post = Post.objects.get(id=post_id)
@@ -58,3 +59,5 @@ def LikeView(request, post_id):
     post.likes = new_value
     post.save()
     return HttpResponseRedirect('/')
+=======
+>>>>>>> bba7967e0142db0b2effb0b7ccb28e53f831396b
