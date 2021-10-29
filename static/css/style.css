@@ -6,6 +6,7 @@ html, body{
     padding: 0;
     margin: 0;
     font-family: Helvetica;
+    background-color: black;
 }
 
 /*
@@ -24,25 +25,34 @@ Post
     position: absolute;
     top: 40px;
     right: 15px;
-    border: 1px solid lightgray;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 3px;
-    cursor: pointer;
-    box-shadow: 0px 0px 4px rgb(175, 175, 175);
+    font-size: 0px;
     text-decoration: none;
     color: black;
 }
 
 .posts li a{
     text-decoration: none;
-    color: black;
+    border: 1px solid lightgray;
+    color: white;
+    padding: 5px 10px;
+    width: 100%;
+    box-shadow: 0px 0px 4px rgb(255, 255, 255);
+    font-size: 13px;
+    background-color: black;
 }
 
-.posts li .menu:hover{
+a{
+    display: grid;
+    height: 20px;
+    width: 50px;
+    place-items: center;
+}
+
+
+.posts li .menu a:hover{
     text-decoration: none;
-    background-color: lightgrey;
-    transition-duration: 0.2s;
+    background-color: #2c2c2c;
+    transition-duration: 0.3s;
 }
 .posts li{
     display: flex;  
@@ -62,7 +72,10 @@ Post
 }
 
 .container{
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    color: white;
+
 }
 
 .posts li .name_body .name {
@@ -85,6 +98,7 @@ ul{
 
 .post_form{
     padding: 10px;
+    border-bottom: 1px solid #707070;
 }
 
 .post_form .name{
@@ -93,11 +107,29 @@ ul{
     padding-bottom: 10px;
     border: none;
     font-family: Helvetica;
-    background: lightgray;
-    color: black;
+    background: black;
+    color: white;
     border: 0px;
     text-align: inherit;
     outline: none;
+}
+
+input::placeholder{
+    color: white;
+    transition: color 0.3s ease;
+}
+
+input:focus::placeholder{
+    color:transparent
+}
+
+textarea::placeholder{
+    color: #707070;
+    transition: color 0.3s ease;
+}
+
+textarea:focus::placeholder{
+    color:transparent
 }
 
 .post_form textarea{
@@ -107,8 +139,24 @@ ul{
     font-family: Helvetica;
     height: 100px;
     font-size: 20px;
-    color:black;
+    color:white;
     outline: none;
+    background-color: black;
+    border-top: 1px solid#707070;
+}
+
+.body{
+    width: 100%;
+    padding-top: 10px;
+    border: none;
+    font-family: Helvetica;
+    height: 100px;
+    font-size: 20px;
+    color:white;
+    outline: none;
+    background-color: black;
+    border-top: 1px solid#707070;
+    overflow-wrap: break-word;
 }
 
 
@@ -138,14 +186,16 @@ ul{
     max-width: 600px;
     height: 100%;
     margin: 0 auto;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid #707070;
+    border-right: 1px solid #707070;
 }
 
 h1{
     padding: 20px 20px;
     margin: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #707070;
+    color: white;
+    font-family: Helvetica;
 }
 
 form{
@@ -157,7 +207,7 @@ form{
 .bottom{
     display: flex;
     padding-top: 20px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #707070;
     padding-bottom: 40px;
 }
 
@@ -191,12 +241,13 @@ label{
     margin: auto;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgb(29, 161, 242);
     font-family: Helvetica;
     font-size: 15px;
     display: flex;
-    box-shadow: 0px 0px 4px black;
+    box-shadow: 0px 0px 4px #707070;
     cursor: pointer;
+    border-radius: ;
 }
 
 .image{
@@ -218,7 +269,7 @@ label{
 }
 
 #like_button{
-    background-color: white;
+    background-color: black;
     border: none;
     cursor: pointer;
     align-items: center;
