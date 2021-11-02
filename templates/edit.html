@@ -19,19 +19,23 @@
             padding: 5px;
             width: 95%;
         "> 
-            <input class="body" name="body" value="{{ post.body }}" required/>
+            <textarea class="body" name="body" required>{{ post.body }}</textarea>
             <img class="image" src="{{ post.image.url }}">
-            <div class="bottom">
-                <div></div>
-                <a class="cancel"href="/">Cancel</a>
-                <button class="red submit" type="submit">Update</button>
-                <div class="img-up"> <input type="file" name="image" id="file" accept="{image/*}"> </div>
-               
-          <label for="file">Upload
-                    <i class="material-icons">
-                        add_photo_alternate
-                    </i>
-                </label>
+            <div class="bottom">                
+                <div>
+                    <div class="img-up"> <input type="file" name="image" id="file" accept="{image/*}"> </div>
+                    <label for="file">Upload
+                        <i class="material-icons">
+                            add_photo_alternate
+                        </i>
+                    </label>
+                </div>
+                <div class='bottom-button'>
+                    <a class="cancel"href="/">Cancel</a>
+                    <button class="update" type="submit">Update</button> 
+                </div>
+
+
 
             </div>
          </div>   
