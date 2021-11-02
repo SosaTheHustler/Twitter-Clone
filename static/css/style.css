@@ -344,7 +344,18 @@ label{
     .bottom-button{
         margin-top: 50px;
         position: relative;
+        margin-left: 30px;
     }
+    .submit{
+        margin-top: 30px;
+        padding: 7px 8px;
+    }
+    .images{
+        width: 80px;
+        height: 30px;
+        
+    }
+
 }
 
 @media screen and (max-width: 600px){
@@ -361,3 +372,4 @@ label{
         margin-bottom: 10px;
     }
 }
+
